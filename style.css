@@ -1,0 +1,137 @@
+:root{
+    --Rojo: hsl(0, 78%, 62%);
+    --turquesa: hsl(180, 62%, 55%);
+    --naranja: hsl(34, 97%, 64%);
+    --azul: hsl(212, 86%, 64%);
+
+    --azulOscuro: hsl(234, 12%, 34%);
+    --grisClaro: hsl(229, 6%, 66%);
+    --blanco: hsl(0, 0%, 98%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blanco);
+}
+.feature{
+    width: 90%;
+    margin: 70px auto;
+}
+.content_feature_div{
+    text-align: center;
+}
+.title_feature{
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: var(--grisClaro);
+}
+.title_feature span{
+    font-weight: bold;
+    color: var(--azulOscuro);
+}
+.subtitle_feature{
+    margin-top: 25px;
+    text-align:center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    color: var(--grisClaro);
+    
+}
+
+.grid_section{
+    margin-top: 50px;
+    display: grid;
+    gap: 25px;
+    grid-template-areas: 
+    "area1"
+    "area2"
+    "area3"
+    "area4";
+}
+
+.area:nth-child(1){
+    grid-area: area1;
+    border-top: 4px solid hsl(180, 62%, 55%);
+    padding: 25px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #b6b6b6;
+}
+.title_area{
+    color: var(--azulOscuro);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.paragraph_area{
+    color: var(--grisClaro);
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+.img{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.area:nth-child(2){
+    grid-area: area2;
+    border-top: 4px solid hsl(0, 78%, 62%);
+    padding: 25px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #b6b6b6;
+}
+
+.area:nth-child(3){
+    grid-area: area3;
+    border-top: 4px solid hsl(34, 97%, 64%);
+    padding: 25px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #b6b6b6;
+}
+
+.area:nth-child(4){
+    grid-area: area4;
+    border-top: 4px solid hsl(212, 86%, 64%);
+    padding: 25px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #b6b6b6;
+}
+
+@media (min-width:795px) {
+    .area{
+        transition: .5s;
+    }
+    .content_feature_div{
+        width: 45%;
+        margin: 0 auto;
+    }
+    .subtitle_feature{
+        font-size: .9em;
+        font-weight: 600;
+        
+    }
+    .grid_section{
+        margin-top: 50px;
+        display: grid;
+        gap: 25px;
+        grid-template-areas: 
+        ". . area2 area2 . ."
+        "area1 area1 area2 area2 area4 area4"
+        "area1 area1 area3 area3 area4 area4"
+        ". . area3 area3 . .";
+    }
+    .area:hover{
+        transform: translate(-10px , -10px);
+    }
+    
+}
